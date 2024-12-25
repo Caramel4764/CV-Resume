@@ -13,7 +13,7 @@ p, li{
   margin-left:0px;
   position:absolute;
   top:2%;
-  right:5%;
+  right:1%;
 }
 #basic-info {
   display: flex;
@@ -32,7 +32,7 @@ p, li{
 }
 #infoBg {
   color: #1C110A;
-  padding: 60px 20px 40px 20px;
+  padding: 30px 20px 10px 20px;
   margin: 0;
   color:#E4D6A7;
   background-color:#383321;
@@ -62,6 +62,7 @@ p {
 }
 .border {
   border-top:#383321 2px solid;
+  margin: 20px 0px;
 }
 button {
   margin-top: 20px;
@@ -78,12 +79,12 @@ button {
   padding:0px 10px;
   overflow-x: hidden;
 }
-/*button {
-  font-size: 35px;
-  width: 40px;
-  height: 40px;
-  border:none;
-  background-color: #1C110A;
-  color: #E4D6A7;
-  border: #E4D6A7 2px
-}*/
+.delete {
+  color:red;
+  margin: 0px 10px;
+}
+.add {
+  color: green;
+  font-size: 40px;
+  margin: 20px 0px;
+}

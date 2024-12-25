@@ -6,6 +6,7 @@ import GeneralInfo from "./components/GeneralInfo"
 import JobExperience from './components/JobExperience'
 import EducationalExperience from './components/EducationalExperience'
 import './App.css'
+import { FaPlusSquare } from "react-icons/fa";
 
 function App() {
   const [info, setInfo] = useState({
@@ -16,14 +17,16 @@ function App() {
   const [education, setEducational] = useState([{
     schoolName: "Name of School",
     areaOfstudy: "Area of Study",
-    date: "1/1/2024",
+    date: "2024-01-01",
+    description:"",
   }]);
   const [experience, setExperience] = useState([{
     companyName:"Name of Company",
     positionTitle:"Position Name",
     responsibilities: ["test"],
-    beginDate:"1/1/2024",
-    endDate:"1/1/2024",
+    beginDate:"2024-01-01",
+    endDate:"2024-01-01",
+    description:"",
   }]);
   function updateGeneralInfo(info) {
     setInfo(info);
@@ -37,8 +40,9 @@ function App() {
       companyName:"Name of Company",
       positionTitle:"Position Name",
       responsibilities: ["test"],
-      beginDate:"1/1/2024",
-      endDate:"1/1/2024",
+      beginDate:"2024-01-01",
+      endDate:"2024-01-01",
+      description:"",
     }
     setExperience(exp=>[...exp, newExperience]);
   }
@@ -46,22 +50,28 @@ function App() {
     let newEducation = {
       schoolName: "Name of School",
       areaOfstudy: "Area of Study",
-      date: "1/1/2024",
+      date: "2024-01-01",
     };
     setEducational(edu=> [...edu, newEducation]);
+  }
+  function deleteEducation(index) {
+    setEducational(education.filter((edu, i)=>i!=index));
   }
   function updateExperience(replacement, index) {
     let newExperience = experience.map((exp, i)=>(i===index ? replacement : exp));
     setExperience(newExperience);
   }
+  function deleteExperience(index) {
+    setExperience(experience.filter((exp, i)=>index!=i));
+  }
   const educations = [];
   const experiences = [];
   for (let i = 0; i<education.length; i++) {
-    educations.push(<EducationalExperience info={education[i]} index={i} onChange={updateEducation}></EducationalExperience>);
+    educations.push(<EducationalExperience info={education[i]} index={i} onDelete={deleteEducation} onChange={updateEducation}></EducationalExperience>);
   }
 
   for (let i = 0; i<experience.length; i++) {
-    experiences.push(<JobExperience info={experience[i]} index={i} onChange={updateExperience}></JobExperience>);
+    experiences.push(<JobExperience info={experience[i]} index={i} onDelete={deleteExperience} onChange={updateExperience}></JobExperience>);
   }
 
   return (
@@ -69,9 +79,9 @@ function App() {
       <div id='leftSection'>
         <GeneralInfo info={info} onChange={updateGeneralInfo}></GeneralInfo>
         {educations}
-        <button onClick={addEducation}>+</button>
+        <FaPlusSquare class="add" onClick={addEducation}/>
         {experiences}
-        <button onClick={addExperience}>+</button>
+        <FaPlusSquare class="add" onClick={addEducation}/>
       </div>
       <Resume info={info} education={education} experience={experience}></Resume>
     </>
