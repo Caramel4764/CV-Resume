@@ -123,3 +123,19 @@ button {
 #profile-input {
   font-size: 20px;
 }
+.paragraph-input {
+  font-size: 20px;
+  height: 300px;
+  width: 99%;
+  resize:none;
+}
+#description {
+  margin-bottom: 15px;
+  width: 95%;
+  overflow-wrap: break-word;
+  border-left: 5px #383321 solid;
+  padding-left: 5px;
+}
+.small {
+  font-size: 15px;
+}

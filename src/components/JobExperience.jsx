@@ -16,8 +16,8 @@ function JobExperience({info, index, onChange, onDelete}) {
           <input onChange={(event)=>onChange({...info, positionTitle:event.target.value}, index)}></input>
         </div>
         <div>
-          <p>Responsibility</p>
-          <input></input>
+          <p>Description</p>
+          <textarea class="paragraph-input" onChange={(e)=>onChange({...info, description:e.target.value}, index)}></textarea>
         </div>
         <div>
           <p>Beginning Date</p>

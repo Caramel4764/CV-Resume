@@ -14,6 +14,8 @@ function App() {
     email: "email@example.com",
     phoneNum: "1234567890",
     profile: "none",
+    skills: [],
+
   });
   const [education, setEducational] = useState([{
     schoolName: "Name of School",
@@ -24,7 +26,6 @@ function App() {
   const [experience, setExperience] = useState([{
     companyName:"Name of Company",
     positionTitle:"Position Name",
-    responsibilities: ["test"],
     beginDate:"2024-01-01",
     endDate:"2024-01-01",
     description:"",
@@ -40,7 +41,6 @@ function App() {
     let newExperience = {
       companyName:"Name of Company",
       positionTitle:"Position Name",
-      responsibilities: ["test"],
       beginDate:"2024-01-01",
       endDate:"2024-01-01",
       description:"",

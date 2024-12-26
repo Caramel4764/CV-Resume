@@ -22,13 +22,7 @@ function Resume ({info, education, experience}) {
     <>
     <div class="info-section">
       <p>{experience[i].companyName} ({experience[i].positionTitle})</p>
-      <ul>
-        {
-        experience[i].responsibilities.forEach((responsibility,index)=>{
-        <li key={index}>{responsibility}</li>
-        })
-        }
-      </ul>
+      <p id="description">Description: {experience[i].description}</p>
       <p>{experience[i].beginDate.slice(5,7)}/{experience[i].beginDate.slice(8,10)}/{experience[i].beginDate.slice(0,4)} - {experience[i].endDate.slice(5,7)}/{experience[i].endDate.slice(8,10)}/{experience[i].endDate.slice(0,4)}</p>
     </div>
     {i!=experience.length-1&&<div className="border"></div>}
@@ -58,6 +52,12 @@ function Resume ({info, education, experience}) {
           </div>
         </div>
 
+        <div className="divider">
+          <h2>Skills</h2>
+          <ul>
+            {info.skills.map((skill)=>(<li>{skill}</li>))}
+          </ul>
+        </div>
         <div class="divider">
           <h2>Education</h2>
           {educationListElement}
