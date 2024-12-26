@@ -19,7 +19,8 @@ function GeneralInfo({info, onChange}) {
           <input onChange={(event)=>{onChange({...info, phoneNum:event.target.value})}}></input>
         </div>
         <div>
-          <input type="file" accept="image/*" onChange={(event)=>{onChange({...info, profile: URL.createObjectURL(event.target.files[0])})}}></input>
+          <p>Profile Image</p>
+          <input id="profile-input" type="file" accept="image/*" onChange={(event)=>{onChange({...info, profile: URL.createObjectURL(event.target.files[0])})}}></input>
         </div>
       </div>
     </>

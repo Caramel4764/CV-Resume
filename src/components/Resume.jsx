@@ -1,7 +1,7 @@
 import "../styles/resume.css";
 import { IoIosMail } from "react-icons/io";
 import { FaPhoneAlt } from "react-icons/fa";
-import noProfile from "../assets/noProfile.jpg";
+import noProfile from "../assets/noProfile.png";
 
 function Resume ({info, education, experience}) {
   let educationListElement = [];
@@ -45,12 +45,15 @@ function Resume ({info, education, experience}) {
               {info.profile=="none"?<img id="profile" src={noProfile}></img>:<img id="profile" src={info.profile}></img>}
               </div>
             </div>
+
             <div id="profile-word-section">
-              <h1 id="name">{info.name}</h1>
-              <ul id="basic-info">
-                <li><IoIosMail />{info.email}</li>
-                <li><FaPhoneAlt />({info.phoneNum.slice(0,3)}){info.phoneNum.slice(3,6)}-{info.phoneNum.slice(6)}</li>
-              </ul>
+              <div id="profile-vertical-div">
+                <h1 id="name">{info.name}</h1>
+                <ul id="basic-info">
+                  <li><IoIosMail />{info.email}</li>
+                  <li><FaPhoneAlt />({info.phoneNum.slice(0,3)}){info.phoneNum.slice(3,6)}-{info.phoneNum.slice(6)}</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>

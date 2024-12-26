@@ -82,7 +82,7 @@ function App() {
         {educations}
         <FaPlusSquare class="add" onClick={addEducation}/>
         {experiences}
-        <FaPlusSquare class="add" onClick={addEducation}/>
+        <FaPlusSquare class="add" onClick={addExperience}/>
       </div>
       <Resume info={info} education={education} experience={experience}></Resume>
     </>
