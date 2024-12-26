@@ -13,6 +13,7 @@ function App() {
     name: "John Doe",
     email: "email@example.com",
     phoneNum: "1234567890",
+    profile: "none",
   });
   const [education, setEducational] = useState([{
     schoolName: "Name of School",

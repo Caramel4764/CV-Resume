@@ -17,8 +17,10 @@ p, li{
 }
 #basic-info {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   padding: 0;
+  gap: 15px;
 }
 #basic-info li{
   justify-content: center;
@@ -30,15 +32,6 @@ p, li{
   justify-content: center;
   margin:0;
 }
-#infoBg {
-  color: #1C110A;
-  padding: 30px 20px 10px 20px;
-  margin: 0;
-  color:#E4D6A7;
-  background-color:#383321;
-
-}
-
 .divider {
   margin: 0px;
   padding: 5px 15px;
@@ -74,7 +67,7 @@ button {
   margin-left: 30px;
   overflow:scroll;
   height: 100vh;
-  background-color: pink;
+  background-color: #ADD8E6;
   width: 30%;
   padding:0px 10px;
   overflow-x: hidden;
@@ -87,4 +80,38 @@ button {
   color: green;
   font-size: 40px;
   margin: 20px 0px;
+}
+#profile {
+  height: 170px;
+}
+#profile-border {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow:hidden;
+}
+#profile-section {
+  flex: 1;
+}
+
+#profile-word-section {
+  flex: 3;
+}
+#profile-flex {
+  width: 700px;
+  display:flex;
+  justify-content: center;
+}
+
+#infoBg {
+  color: #1C110A;
+  padding: 30px 20px 10px 20px;
+  margin: 0;
+  color:#E4D6A7;
+  background-color:#383321;
+  display:flex;
+  justify-content: center;
 }
