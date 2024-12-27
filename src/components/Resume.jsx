@@ -1,6 +1,7 @@
 import "../styles/resume.css";
 import { IoIosMail } from "react-icons/io";
 import { FaPhoneAlt } from "react-icons/fa";
+import { BsFillHexagonFill  } from "react-icons/bs";
 import noProfile from "../assets/noProfile.png";
 
 function Resume ({info, education, experience}) {
@@ -55,7 +56,10 @@ function Resume ({info, education, experience}) {
         <div className="divider">
           <h2>Skills</h2>
           <ul>
-            {info.skills.map((skill)=>(<li>{skill}</li>))}
+            {info.skills.map((skill, index)=>(<li class="v-center">
+              {index % 2 == 0?<BsFillHexagonFill class="hexigon-point coffee"/>:<BsFillHexagonFill class="hexigon-point honey"/>}
+              {skill}
+            </li>))}
           </ul>
         </div>
         <div class="divider">

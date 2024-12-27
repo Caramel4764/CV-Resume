@@ -2,17 +2,23 @@
   margin-left:0;
   font-family:sans-serif;
 }
+body{
+  margin-top:0px;
+}
 p, li{
   font-size: 20px;
 }
 #resume {
   background-color: #E9B44C;
-  border: #1c110A 4px, solid;
+  /*border: #1c110A 4px, solid;*/
+  overflow:scroll;
   padding: 0px;
   width:1000px;
+  overflow-x: hidden;
+  height:100vh;
   margin-left:0px;
   position:absolute;
-  top:2%;
+  top:0%;
   right:1%;
 }
 #basic-info {
@@ -138,4 +144,20 @@ button {
 }
 .small {
   font-size: 15px;
+}
+ul {
+  list-style: none;
+}
+.hexigon-point {
+  margin-right: 5px;
+}
+.v-center {
+  display:flex;
+  align-items: center;
+}
+.coffee {
+  color:#1C110A;
+}
+.honey {
+  color: #E4D6A7;
 }
