@@ -18,13 +18,13 @@ function App() {
 
   });
   const [education, setEducational] = useState([{
-    schoolName: "Name of School",
-    areaOfstudy: "Area of Study",
+    schoolName: "School Name",
+    areaOfstudy: "Computer Science",
     date: "2024-01-01",
     description:"",
   }]);
   const [experience, setExperience] = useState([{
-    companyName:"Name of Company",
+    companyName:"Company Name",
     positionTitle:"Position Name",
     beginDate:"2024-01-01",
     endDate:"2024-01-01",
@@ -52,6 +52,7 @@ function App() {
       schoolName: "Name of School",
       areaOfstudy: "Area of Study",
       date: "2024-01-01",
+      description:"",
     };
     setEducational(edu=> [...edu, newEducation]);
   }

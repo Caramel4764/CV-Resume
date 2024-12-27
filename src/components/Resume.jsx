@@ -11,7 +11,8 @@ function Resume ({info, education, experience}) {
     <>
     <div class="info-section">
       <p>{education[i].schoolName} ({education[i].areaOfstudy})</p>
-      <p>{education[i].date.slice(5,7)}/{education[i].date.slice(8,10)}/{education[i].date.slice(0,4)}</p>
+      <p id="description">Description: {education[i].description}</p>
+      <p class="date">{education[i].date.slice(5,7)}/{education[i].date.slice(8,10)}/{education[i].date.slice(0,4)}</p>
     </div>
     {i!=education.length-1&&<div className="border"></div>}
     </>
@@ -24,7 +25,7 @@ function Resume ({info, education, experience}) {
     <div class="info-section">
       <p>{experience[i].companyName} ({experience[i].positionTitle})</p>
       <p id="description">Description: {experience[i].description}</p>
-      <p>{experience[i].beginDate.slice(5,7)}/{experience[i].beginDate.slice(8,10)}/{experience[i].beginDate.slice(0,4)} - {experience[i].endDate.slice(5,7)}/{experience[i].endDate.slice(8,10)}/{experience[i].endDate.slice(0,4)}</p>
+      <p class="date">{experience[i].beginDate.slice(5,7)}/{experience[i].beginDate.slice(8,10)}/{experience[i].beginDate.slice(0,4)} - {experience[i].endDate.slice(5,7)}/{experience[i].endDate.slice(8,10)}/{experience[i].endDate.slice(0,4)}</p>
     </div>
     {i!=experience.length-1&&<div className="border"></div>}
     </>

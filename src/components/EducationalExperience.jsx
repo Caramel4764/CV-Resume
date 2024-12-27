@@ -16,6 +16,10 @@ function EducationalExperience({info, index, onChange, onDelete}) {
           <input onChange={(event)=>{onChange({...info, areaOfstudy:event.target.value}, index)}}></input>
         </div>
         <div>
+          <p>Description</p>
+          <input onChange={(event)=>{onChange({...info, description:event.target.value}, index)}}></input>
+        </div>
+        <div>
           <p>Date of Study</p>
           <input type="date" onChange={(event)=>{onChange({...info, date:event.target.value}, index)}}></input>
         </div>
