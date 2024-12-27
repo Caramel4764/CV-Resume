@@ -6,14 +6,14 @@ body{
   margin-top:0px;
 }
 p, li{
-  font-size: 20px;
+  font-size: 16px;
 }
 #resume {
   background-color: #E9B44C;
   /*border: #1c110A 4px, solid;*/
   overflow:scroll;
   padding: 0px;
-  width:1000px;
+  width:800px;
   overflow-x: hidden;
   height:100vh;
   margin-left:0px;
@@ -35,6 +35,7 @@ p, li{
 }
 #name {
   display:flex;
+  font-size: 28px;
   justify-content: center;
   margin:0;
 }
@@ -45,15 +46,16 @@ p, li{
 
 h2 {
   background-color: #1C110A;
-  border-left:15px solid #E4D6A7;
+  border-left:8px solid #E4D6A7;
   color:#E4D6A7;
-  padding: 10px;
+  padding: 5px;
+  font-size: 18px;
 }
 .info-section {
   margin-left: 25px;
 }
 input {
-  font-size: 28px;
+  font-size: 20px;
   width:350px;
 }
 p {
@@ -67,7 +69,7 @@ button {
   margin-top: 20px;
   width: 30px;
   height: 30px;
-  font-size: 25px;
+  font-size: 18px;
 }
 #leftSection {
   margin-left: 30px;
@@ -84,15 +86,15 @@ button {
 }
 .add {
   color: green;
-  font-size: 40px;
+  font-size: 30px;
   margin: 20px 0px;
 }
 #profile {
-  height: 170px;
+  height: 140px;
 }
 #profile-border {
-  width: 170px;
-  height: 170px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   border: #E4D6A7 6px solid;
   display: flex;
@@ -113,7 +115,7 @@ button {
 #profile-vertical-div {
 }
 #profile-flex {
-  width: 500px;
+  width: 400px;
   display:flex;
   justify-content: center;
 }
@@ -127,10 +129,10 @@ button {
   justify-content: center;
 }
 #profile-input {
-  font-size: 20px;
+  font-size: 16px;
 }
 .paragraph-input {
-  font-size: 20px;
+  font-size: 14px;
   height: 300px;
   width: 99%;
   resize:none;
@@ -143,7 +145,7 @@ button {
   padding-left: 5px;
 }
 .small {
-  font-size: 15px;
+  font-size: 14px;
 }
 ul {
   list-style: none;
@@ -163,4 +165,10 @@ ul {
 }
 .date {
   margin-top:30px;
+}
+h1 {
+  font-size: 20px;
+}
+#skill-li {
+  margin-top: 4px;
 }

@@ -57,7 +57,7 @@ function Resume ({info, education, experience}) {
         <div className="divider">
           <h2>Skills</h2>
           <ul>
-            {info.skills.map((skill, index)=>(<li class="v-center">
+            {info.skills.map((skill, index)=>(<li id="skill-li" class="v-center">
               {index % 2 == 0?<BsFillHexagonFill class="hexigon-point coffee"/>:<BsFillHexagonFill class="hexigon-point honey"/>}
               {skill}
             </li>))}
